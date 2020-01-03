@@ -11,7 +11,7 @@ CORS(app)
 
 api = Api(app)
 
-mongoclient = MongoClient("mongodb://localhost:27017/")
+mongoclient = MongoClient("mongodb://db:27017/")
 mongoDB = mongoclient.myappdb
 mongoEntries = mongoDB.collection
 

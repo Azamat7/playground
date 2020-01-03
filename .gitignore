@@ -1,0 +1,4 @@
+# dependencies
+/node_modules
+/my-app-client/yarn.lock
+/.idea

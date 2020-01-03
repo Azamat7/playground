@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+  my-app-server:
+    build: ./my-app-server
+    command: python app.py
+    volumes:
+      - .:/code
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+#    environment:
+#      - FLASK_ENV=development
+#      - FLASK_APP=app.py
+#      - FLASK_DEBUG=1
+  my-app-client:
+    build: ./my-app-client
+    command: yarn --cwd my-app-client/ run start
+    volumes:
+      - .:/code
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
