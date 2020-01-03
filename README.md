@@ -31,6 +31,8 @@ yarn run start
 
 ## Build and Run with Docker Compose
 
+install docker and docker-compose via brew
+
 inside playground:
 
 ```bash
