@@ -31,6 +31,24 @@ yarn run start
 
 ## Build and Run with Docker Compose
 
+install brew:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+install docker:
+
+```bash
+brew install docker
+```
+
+install docker-compose:
+
+```bash
+brew install docker-compose
+```
+
 inside playground:
 
 ```bash
