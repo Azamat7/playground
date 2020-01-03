@@ -14,16 +14,12 @@ services:
       - "5000:5000"
     depends_on:
       - db
-#    environment:
-#      - FLASK_ENV=development
-#      - FLASK_APP=app.py
-#      - FLASK_DEBUG=1
   my-app-client:
     build: ./my-app-client
     command: yarn --cwd my-app-client/ run start
     volumes:
       - .:/code
-    expose:
-      - 3000
+    depends_on:
+      - my-app-server
     ports:
       - "3000:3000"
